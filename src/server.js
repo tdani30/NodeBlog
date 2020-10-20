@@ -114,8 +114,8 @@ app.get('*',(req,res)=>
 {
    res.sendFile(ptah.join(__dirname + '/build/index.html'));
 });
-
-app.listen(8000,()=>
+const port = process.env.PORT || 8000;
+app.listen(port,()=>
 {
     console.log('Listen port on 8000',);
 });
